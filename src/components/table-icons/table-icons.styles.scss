@@ -1,0 +1,72 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+
+.table__icons {
+  position: relative;
+
+  .table__line {
+    height: 60px;
+    &.folder-1 {
+      height: 0;
+    }
+    &.folder-1 {
+      @include tableLine(27px, 0);
+    }
+
+    &.folder-2 {
+      @include tableLine(27px, 11px);
+    }
+
+    &.file {
+      @include tableLine(48px, 11px);
+    }
+  }
+}
+
+.table__icons-container {
+  position: absolute;
+  border-radius: 6px;
+  padding: 1px 2px;
+  top: 16px;
+  display: flex;
+  pointer-events: none;
+  z-index: 9;
+
+  &.folder-1 {
+    @include iconsContainerPosition(12px);
+  }
+
+  &.folder-2 {
+    @include iconsContainerPosition(32px);
+  }
+
+  &.file {
+    @include iconsContainerPosition(52px);
+  }
+
+  &.saved {
+    cursor: pointer;
+    pointer-events: auto;
+  }
+
+  &.saved:hover {
+    background-color: $color-dividingLines;
+
+    .table__icon {
+      display: block;
+    }
+  }
+}
+
+.table__icon {
+  background-repeat: no-repeat;
+  background-position: center;
+  display: none;
+  width: 24px;
+  height: 24px;
+  margin: 1px;
+
+  &:nth-of-type(1) {
+    display: block;
+  }
+}

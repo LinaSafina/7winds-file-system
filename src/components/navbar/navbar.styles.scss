@@ -1,0 +1,11 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/mixins';
+
+.navbar {
+  grid-area: navbar;
+  @include dividingLine(border-right);
+}
+
+.navbar__list {
+  background-color: $color-header;
+}

@@ -1,25 +1,18 @@
-import logo from "./logo.svg";
-import style from "./App.module.scss";
+import { Route, Routes } from 'react-router';
 
-function App() {
+import Header from './components/header/header.component';
+import Projects from './pages/projects/projects.component';
+
+const App = () => {
   return (
-    <div className={style.App}>
-      <header className={style["App-header"]}>
-        <img src={logo} className={style["App-logo"]} alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className={style["App-link"]}
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+      <Header />
+
+      <Routes>
+        <Route path='/' element={<Projects />}></Route>
+      </Routes>
+    </>
   );
-}
+};
 
 export default App;

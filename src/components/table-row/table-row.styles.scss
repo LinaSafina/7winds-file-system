@@ -1,0 +1,20 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+
+.table__row {
+  @include gridRows(60px);
+  @include dividingLine(border-top);
+
+  &.table__row--edited {
+    .input {
+      color: $color-additionalText;
+      border: 1px solid $color-dividingLines;
+      border-radius: 6px;
+      pointer-events: auto;
+    }
+  }
+
+  &:nth-last-of-type() {
+    border: none;
+  }
+}

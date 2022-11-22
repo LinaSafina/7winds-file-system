@@ -1,0 +1,17 @@
+@import '../../sassStyles/mixins';
+@import '../../sassStyles/variables';
+
+.table {
+  display: flex;
+  flex-direction: column;
+  letter-spacing: 0.1px;
+}
+
+.table__headers {
+  @include gridRows(41px);
+  color: $color-additionalText;
+
+  .table__head {
+    padding: 11px 12px 12px;
+  }
+}

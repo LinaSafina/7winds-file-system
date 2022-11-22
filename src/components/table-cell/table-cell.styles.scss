@@ -1,0 +1,25 @@
+@import '../../sassStyles/variables';
+@import '../../sassStyles/mixins';
+
+.input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  letter-spacing: 0.1px;
+  background-color: transparent;
+  color: $color-mainText;
+  pointer-events: none;
+
+  &:focus {
+    outline: none;
+  }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+  transition: background-color 600000s 0s, color 600000s 0s;
+}
+
+.table__cell {
+  padding: 12px;
+}

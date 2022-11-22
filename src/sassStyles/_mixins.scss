@@ -1,0 +1,25 @@
+@import './variables';
+
+@mixin gridRows($rowHeight) {
+  display: grid;
+  grid-template-columns: 110px auto repeat(4, 200px);
+  grid-template-rows: $rowHeight;
+}
+
+@mixin dividingLine($borderType) {
+  #{$borderType}: 1px solid $color-dividingLines;
+}
+
+@mixin iconsContainerPosition($left) {
+  left: $left;
+}
+
+@mixin tableLine($left, $width) {
+  position: absolute;
+  bottom: 50%;
+  left: $left;
+  width: $width;
+  border-left: 1px solid $color-folderLines;
+  border-bottom: 1px solid $color-folderLines;
+  height: 60px;
+}
