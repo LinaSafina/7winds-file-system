@@ -22,7 +22,7 @@ const Project = () => {
         });
       })
       .catch((error) => console.log(error));
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     if (rowList.length === 0) {
@@ -33,7 +33,7 @@ const Project = () => {
         },
       });
     }
-  }, [rowList]);
+  }, [rowList, dispatch]);
 
   return (
     <div className='table'>
@@ -55,6 +55,9 @@ const Project = () => {
                 : findLastIndex(array, (el) => el.folderType === 'folder1') ===
                   index
                 ? findLastIndex(array, (el) => el.folderType === 'folder1')
+                : findLastIndex(array, (el) => el.folderType === 'folder2') ===
+                  index
+                ? findLastIndex(array, (el) => el.folderType === 'folder2')
                 : 1
             }
           />

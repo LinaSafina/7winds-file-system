@@ -7,7 +7,6 @@ import {
 import { folderTypes } from '../../utils/getIconsByKey';
 
 let height = 0;
-let parentId: number | null = null;
 
 export const flattenRowsList = function (
   arr: RowTypeWithChild[],
